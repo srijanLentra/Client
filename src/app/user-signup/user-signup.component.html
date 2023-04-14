@@ -1,0 +1,149 @@
+<app-navbar></app-navbar>
+<section class="gradient-form  w-[75vw] absolute left-[50%] translate-x-[-50%]">
+  <div class="container h-full p-10">
+    <div
+      class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200"
+    >
+      <div class="w-full">
+        <div class="block rounded-lg bg-white shadow-xl dark:bg-neutral-800">
+          <div class="g-0 lg:flex lg:flex-wrap">
+            <div class="px-4 md:px-0 lg:w-6/12">
+              <div class="md:mx-6 md:p-12">
+                <div class="text-center">
+                  <img
+                    class="mx-auto w-48"
+                    src="../../assets/13.jpg"
+                    alt="logo"
+                  />
+                  <h4 class="mb-12 mt-1 pb-1 text-xl font-semibold">
+                    We are The Life Bridge Company
+                  </h4>
+                </div>
+
+                <form (submit)="onSubmit()">
+                  <p
+                    class="mb-4 text-lg font-normal leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+                  >
+                    Create Account
+                  </p>
+                  <div class="relative mb-4" data-te-input-wrapper-init>
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder=" "
+                      class="bg-gray-50 input-text border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      name="username"
+                      [(ngModel)]="user.username"
+                    />
+                    <label
+                      for="username"
+                      class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"
+                      >Username</label
+                    >
+                    </div>
+                    <div class="relative mb-4" data-te-input-wrapper-init>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder=" "
+                      class="bg-gray-50 input-text border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      name="email"
+                      [(ngModel)]="user.email"
+                    />
+                    <label
+                      for="email"
+                      class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"
+                      >Email</label
+                    >
+                    </div>
+                    <div class="relative mb-4" data-te-input-wrapper-init>
+                    <input
+                      type="password"
+                      id="password"
+                      placeholder=" "
+                      class="bg-gray-50 input-text border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      name="password"
+                      [(ngModel)]="user.password"
+                    />
+                    <label
+                      for="password"
+                      class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"
+                      >Password</label
+                    >
+                    </div>
+                     <div class="relative mb-4" data-te-input-wrapper-init>
+                    <input
+                      type="password"
+                      id="cpassword"
+                      placeholder=" "
+                      (change)="confirmPassword()"
+                      class="mb-2 bg-gray-50 input-text border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      name="cpassword"
+                      [(ngModel)]="cpassword"
+                    />
+                    <label
+                      for="cpassword"
+                      class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"
+                      >Confirm Password</label
+                    >
+                    <div
+                    *ngIf="!this.success"
+                    class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400">Passwords do not match!</div>
+                  </div>
+
+
+                  <div class="mb-12 pb-1 pt-1 text-center">
+                    <button
+                      class="mb-3 inline-block text-[14px]  w-full rounded px-6 pb-2 pt-2.5 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
+                      type="submit"
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                      style="
+                        background: linear-gradient(
+                          to right,
+                          #ee7724,
+                          #d8363a,
+                          #dd3675,
+                          #b44593
+                        );
+                      "
+                    >
+                      Register
+                    </button>
+                    <p
+                      class="font-light text-base text-gray-500 dark:text-gray-400"
+                    >
+                      Already have an account?
+                      <a
+                        routerLink="/user-login"
+                        class="font-medium text-base text-blue-500 text-primary-600 hover:underline dark:text-primary-500"
+                        >Login here</a
+                      >
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none"
+              style="background: linear-gradient(to left, #335ebb, #4286f4)"
+            >
+              <div class="px-4 py-6 text-white md:mx-6 md:p-12">
+                <h4 class="mb-6 text-xl font-semibold">
+                  We are more than just a company
+                </h4>
+                <p class="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

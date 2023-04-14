@@ -1,0 +1,100 @@
+<app-navbar></app-navbar>
+<section class="w-[75vw] mt-[10vh] absolute left-[50%] translate-x-[-50%] top-[15%]">
+  <div class="shadow-xl rounded-lg container h-full px-6 py-12">
+    <div
+      class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between"
+    >
+      <div class="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
+        <img
+          src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          class="w-full"
+          alt="Phone image"
+        />
+      </div>
+
+      <div class="md:w-8/12 lg:ml-6 lg:w-5/12">
+        <div class="text-center">
+          <img class="mx-auto w-48" src="../../assets/13.jpg" alt="logo" />
+          <h4 class="mb-2 mt-1 pb-1 text-xl font-semibold">
+            We are The Life Bridge Company
+          </h4>
+          <h4 class="mb-12 mt-1 pb-1 text-xl font-semibold">User Login</h4>
+        </div>
+        <form (submit)="checkUser()" (change)="validate()" #myForm="ngForm">
+          <div class="relative mb-6" data-te-input-wrapper-init>
+            <input
+              type="email"
+              id="email"
+              placeholder=" "
+              class="bg-gray-50 input-text border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              [(ngModel)]="loginDetails.email" required #myEmail="ngModel" (ngModelChange)="myEmail.control.markAsDirty()"
+              name="email"
+            />
+            <label
+              for="email"
+              class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"
+              >Email</label
+            >
+            <div class="" *ngIf="myEmail.invalid && myEmail.dirty">
+
+              <div *ngIf="myEmail.errors?.['required']" class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400">
+                This field is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-6" data-te-input-wrapper-init>
+              <input
+              type="password"
+              id="password"
+              required
+              placeholder=" "
+              class="bg-gray-50 input-text border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              [(ngModel)]="loginDetails.password" #myPassword="ngModel" (ngModelChange)="myPassword.control.markAsDirty()"
+              name="password"
+            />
+            <label
+              for="password"
+              class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"
+              >Password</label
+            >
+            <div class="" *ngIf="myPassword.invalid && myPassword.dirty">
+
+              <div *ngIf="myPassword.errors?.['required']" class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400">
+                This field is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6 flex items-center justify-between">
+            <a
+              routerLink="/user-signup"
+              class="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+              >Forgot password?</a
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="inline-block bg-blue-500 w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            [disabled]="myForm.invalid" [style.background-color]="myForm.invalid ? 'grey' : null"
+          >
+            Sign in
+          </button>
+          <p
+            class="mb-0 mt-2 pt-1 text-base font-light text-gray-500 dark:text-gray-400"
+          >
+            Don't have an account?
+            <a
+              routerLink="/user-signup"
+              class="font-medium text-base text-blue-500 text-primary-600 hover:underline dark:text-primary-500"
+              >Register</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

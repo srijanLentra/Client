@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<form class="relative top-[10%] left-[50%] w-[50vw] translate-x-[-50%]">
+   <h1 class="font-medium text-[24px] mb-8 -mt-8">Update User Profile</h1>
+  <div class="mb-5 flex flex-row justify-between">
+    <div class="relative w-[45%]">
+      <input type="text" id="firstName" value={{this.user.firstName}}
+      placeholder=" " class="bg-gray-50 input-text  border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      [(ngModel)]="quote.firstName" name="firstName">
+      <label for="firstName" class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"  >First Name</label>
+    </div>
+    <div class="relative w-[45%]">
+      <input type="text" id="lastName" value={{this.user.lastName}}
+        placeholder=" " class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        [(ngModel)]="quote.lastName" name="lastName">
+        <label for="lastName" class="absolute cursor-text text-[16px] text-gray-700 opacity-100 top-2.5 left-4 transition ease-in duration-200 label-text"  >Last Name</label>
+    </div>
+  </div>
+  <div class="mb-5 relative">
+    <input type="email" id="email" value={{this.user.email}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required placeholder=" " [(ngModel)]="quote.email" name="email">
+      <label for="email" class="absolute cursor-text text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >Email</label>
+  </div>
+  <div class="mb-5 relative">
+    <input type="tel" id="phone" value={{this.user.phone}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required placeholder=" " [(ngModel)]="quote.phone" name="phone">
+      <label for="phone" class="absolute cursor-text text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >Phone Number</label>
+  </div>
+  <div class="mb-3 relative">
+    <input type="text" id="Pincode" maxlength="6" value={{this.user.pinCode}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required placeholder=" " onkeypress="return event.charCode >= 48 && event.charCode <= 57" [(ngModel)]="quote.pinCode" name="pinCode">
+      <label for="Pincode" class="absolute cursor-text text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >Pincode</label>
+    </div>
+  <div class="mb-5 mt-6 relative">
+    <input type="date" id="dob" value={{this.user.dateOfBirth}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required [(ngModel)]="quote.dateOfBirth" name="dateOfBirth">
+      <label class="absolute text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >DOB</label>
+
+  </div>
+  <div class="mb-5 relative">
+    <input type="text" id="gender" value={{this.user.gender}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required placeholder=" " [(ngModel)]="quote.gender" name="gender">
+      <label for="gender" class="absolute text-[16px] cursor-text text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >Gender</label>
+
+  </div>
+  <div class="mb-5 relative">
+    <input type="text" id="occupation" value={{this.user.occupation}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required placeholder=" " [(ngModel)]="quote.occupation" name="occupation">
+            <label for="occupation" class="cursor-text absolute text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >Occupation</label>
+
+  </div>
+  <div class="mb-5 relative">
+    <input type="text" id="maritalstatus" value={{this.user.maritalStatus}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required placeholder=" " [(ngModel)]="quote.maritalStatus" name="maritalStatus">
+            <label for="maritalStatus" class="cursor-text absolute text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >Marital Status</label>
+
+  </div>
+  <div class="mb-5 relative">
+    <input type="number" id="dependentCount" value={{this.user.dependentCount}}
+      class="bg-gray-50 input-text  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required placeholder=" " [(ngModel)]="quote.dependentCount" name="dependentCount">
+            <label class="absolute text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"  >Dependent Count*</label>
+
+  </div>
+  <button type="button" (click)="onSubmit()" data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
+
+    <br><br><br><br><br>
+  </form>
+
+
+<!-- <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+    <div class="relative w-full h-full max-w-md md:h-auto">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="popup-modal">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="p-6 text-center">
+                <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h3 class=" text-lg font-normal text-gray-500 dark:text-gray-400">Annual Premium came to be <b>{{this.factors/1}}</b></h3>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">So, your monthly premium becomes <b>{{this.factors/12}}</b></h3>
+                <button data-modal-hide="popup-modal" type="button" class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                    Yes, I want to buy
+                </button>
+                <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancel</button>
+            </div>
+        </div>
+    </div>
+</div> -->

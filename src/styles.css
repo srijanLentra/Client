@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* input[type="text"]:focus ~.input-text{ */
+/* input:focus ~.input-text{
+  @apply text-blue-500 transform -translate-y-5 -translate-x-2 bg-gray-50 px-1;
+} */
+
+.input-text:focus~.label-text,
+.input-text:not(:placeholder-shown).input-text:not(:focus)~.label-text {
+  @apply bg-gray-50 transform -translate-x-2 -translate-y-5 text-blue-500 px-1 text-[13px]
+}
+
+
+.input-text-plan:focus~.label-text-plan,
+.input-text-plan:not(:placeholder-shown).input-text-plan:not(:focus)~.label-text-plan {
+  @apply bg-gray-50 transform -translate-x-4 -translate-y-10 text-blue-500 px-1 text-[13px]
+}
+

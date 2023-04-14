@@ -1,0 +1,19 @@
+::-webkit-scrollbar{
+  width: 5px;
+    background-color: #F5F5F5;
+    position: absolute;
+    left: 0;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(240, 82, 82);
+  border-radius: 5px;
+}
+
+ /* ::-webkit-scrollbar-track {
+   background: gray;
+ } */
+
+ .ishidden{
+  display: none;
+ }

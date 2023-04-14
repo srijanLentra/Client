@@ -1,0 +1,527 @@
+<app-navbar></app-navbar>
+<div class="">
+  <h1
+    class="absolute left-[50%] translate-x-[-50%] pt-6 font-medium text-[24px]"
+  >
+    Term Insurance Calculator
+  </h1>
+  <div class="flex flex-row flex-wrap left-[50%] gap-5 justify-between items-center p-16">
+    <img src="../../assets/premiumCalculatorImg.jpg" alt="" class="w-[40vw]" />
+    <div class="">
+      <form class="relative top-[10%] left-[50%] w-[50vw] translate-x-[-50%]">
+        <div class="mb-7 flex flex-row justify-between">
+          <div class="relative w-[45%]">
+            <input
+              type="text"
+              id="firstName"
+              placeholder=" "
+              class="bg-gray-50 input-text border-gray-300 text-gray-900 opacity-80 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              name="fullname"
+              [(ngModel)]="termForm.fullname"
+            />
+            <label
+              for="firstName"
+              class="absolute cursor-text text-[16px] text-gray-600 top-2.5 left-4 transition ease-in duration-200 label-text"
+              >Full Name</label
+            >
+          </div>
+          <div class="relative w-[45%]">
+            <input
+              type="date"
+              id="dob"
+              class="bg-gray-50 input-text border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              required
+              [(ngModel)]="termForm.dateOfBirth"
+              name="dateOfBirth"
+            />
+            <label
+              class="absolute text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"
+              >DOB</label
+            >
+          </div>
+        </div>
+        <div class="mb-6 flex flex-row justify-between">
+          <div class="w-[45%] relative">
+            <input
+              type="tel"
+              id="phone"
+              class="bg-gray-50 input-text border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              required
+              placeholder=" "
+              name="phone"
+              [(ngModel)]="termForm.phone"
+            />
+            <label
+              for="phone"
+              class="absolute cursor-text text-[16px] text-gray-700 opacity-100 top-2 left-4 transition ease-in duration-200 label-text"
+              >Mobile</label
+            >
+          </div>
+          <div class="flex flex-col w-[45%] -mt-4">
+            <label
+              for="income"
+              class="relative ml-3 cursor-text text-sm text-blue-500 opacity-100"
+              >Annual Income in lakhs</label
+            >
+            <div
+              class="inline-flex rounded-md shadow-sm text-center"
+              id="button-group-income"
+            >
+              <button
+                aria-current="page"
+                class="px-4 py-2 w-[25%] text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                id="income3"
+                (click)="buttonIncomeClicked($event)"
+              >
+                &lt; 3
+              </button>
+              <button
+                class="px-4 py-2 w-[25%] text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                id="income6"
+                (click)="buttonIncomeClicked($event)"
+              >
+                3 - 6
+              </button>
+              <button
+                class="px-4 py-2 w-[25%] text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                id="income10"
+                (click)="buttonIncomeClicked($event)"
+              >
+                6 - 10
+              </button>
+              <button
+                class="px-4 py-2 w-[25%] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                id="income11"
+                (click)="buttonIncomeClicked($event)"
+              >
+                &gt; 10
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row justify-between -mt-3">
+          <div class="flex flex-col w-[45%]">
+            <label
+              for="gender"
+              class="relative ml-3 cursor-text text-sm text-blue-500 opacity-100"
+              >Gender</label
+            >
+
+            <div class="inline-flex rounded-md shadow-sm text-center">
+              <a
+                aria-current="page"
+                class="px-4 py-2 w-[33.3%] text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                (click)="buttonGenderClicked($event)"
+              >
+                Male
+              </a>
+              <a
+                class="px-4 py-2 w-[33.3%] text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                (click)="buttonGenderClicked($event)"
+              >
+                Female
+              </a>
+              <a
+                class="px-4 py-2 w-[33.3%] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                (click)="buttonGenderClicked($event)"
+              >
+                Others
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col w-[45%]">
+            <label
+              for="nicotine"
+              class="relative ml-3 cursor-text text-sm text-blue-500 opacity-100"
+              >Nicotine/Tobacco</label
+            >
+
+            <div class="inline-flex rounded-md shadow-sm text-center">
+              <a
+                aria-current="page"
+                class="px-4 py-2 w-[50%] text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                (click)="buttonNicotineClicked($event)"
+              >
+                Yes
+              </a>
+              <a
+                class="px-4 py-2 w-[50%] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                (click)="buttonNicotineClicked($event)"
+              >
+                No
+              </a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="relative left-[50%] top-8 translate-x-[-50%] px-16 py-3 text-white font-medium text-lg bg-green-400 hover:bg-green-500 rounded-md"
+          data-modal-target="modalOne"
+          data-modal-toggle="modalOne"
+          (click)="calculateNow()"
+        >
+          Calculate Now
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div
+  id="modalOne"
+  tabindex="-1"
+  aria-hidden="true"
+  class="fixed top-[10%] left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="relative w-full h-full max-w-md md:h-auto">
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <div
+        class="flex items-start justify-between pt-4 pb-2 border-b rounded-t dark:border-gray-600"
+      >
+        <h3
+          class="text-xl relative left-[50%] translate-x-[-50%] font-semibold text-gray-900 dark:text-white"
+        >
+          Select your Occupation
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalOne"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col mt-6 h-[28vh]">
+        <div class="inline-flex rounded-md shadow-sm text-center">
+          <a
+            aria-current="page"
+            class="px-4 py-3 w-[50%] mr-2 mb-4 text-md font-medium text-blue-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            data-modal-target="modalSalaried"
+            data-modal-toggle="modalSalaried"
+            data-modal-hide="modalOne"
+            (click)="buttonOccupationClicked($event)"
+          >
+            Salaried
+          </a>
+          <a
+            class="px-4 py-3 w-[50%] ml-2 text-md mb-4 font-medium text-gray-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            (click)="buttonOccupationClicked($event)"
+            data-modal-target="modalSalaried"
+            data-modal-toggle="modalSalaried"
+            data-modal-hide="modalOne"
+          >
+            Self Employeed
+          </a>
+        </div>
+        <div class="inline-flex rounded-md shadow-sm text-center mb-4">
+          <a
+            aria-current="page"
+            class="px-4 py-3 w-[50%] mr-2 text-md font-medium text-gray-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            (click)="buttonOccupationClicked($event)"
+            data-modal-target="modalSalaried"
+            data-modal-toggle="modalSalaried"
+            data-modal-hide="modalOne"
+          >
+            Professional
+          </a>
+          <a
+            class="px-4 py-3 w-[50%] ml-2 text-md font-medium text-gray-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            (click)="buttonOccupationClicked($event)"
+            data-modal-target="modalSalaried"
+            data-modal-toggle="modalSalaried"
+            data-modal-hide="modalOne"
+          >
+            Others
+          </a>
+        </div>
+        <button
+          class="px-4 py-2 bg-red-400 border rounded-md"
+          data-modal-hide="modalOne"
+        >
+          Go back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="modalSalaried"
+  tabindex="-1"
+  aria-hidden="true"
+  class="fixed top-[10%] left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="relative w-full h-full max-w-md md:h-auto">
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <div
+        class="flex items-start justify-between pt-4 pb-2 border-b rounded-t dark:border-gray-600"
+      >
+        <h3
+          class="text-xl relative left-[50%] translate-x-[-50%] font-semibold text-gray-900 dark:text-white"
+        >
+          Select your Qualification
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalSalaried"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col mt-6 h-[28vh]">
+        <div class="inline-flex rounded-md shadow-sm text-center">
+          <a
+            aria-current="page"
+            class="px-4 py-3 w-[50%] mr-2 mb-4 text-md font-medium text-blue-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            data-modal-target="planextended"
+            data-modal-toggle="planextended"
+            data-modal-hide="modalSalaried"
+            (click)="buttonQualificationClicked($event)"
+          >
+            Graduate and Above
+          </a>
+          <a
+            class="px-4 py-3 w-[50%] ml-2 text-md mb-4 font-medium text-gray-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            data-modal-target="planextended"
+            data-modal-toggle="planextended"
+            data-modal-hide="modalSalaried"
+            (click)="buttonQualificationClicked($event)"
+          >
+            12th Pass
+          </a>
+        </div>
+        <div class="inline-flex rounded-md shadow-sm text-center mb-4">
+          <a
+            aria-current="page"
+            class="px-4 py-3 w-[100%] mr-2 text-md font-medium text-gray-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            data-modal-target="planextended"
+            data-modal-toggle="planextended"
+            data-modal-hide="modalSalaried"
+            (click)="buttonQualificationClicked($event)"
+          >
+            Below 12th Pass
+          </a>
+        </div>
+        <button
+          class="px-4 py-2 bg-red-400 border rounded-md"
+          data-modal-hide="modalSalaried"
+          data-modal-target="modalOne"
+          data-modal-toggle="modalOne"
+        >
+          Go back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="planextended"
+  tabindex="-1"
+  aria-hidden="true"
+  class="fixed top-[10%] left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="relative w-full h-full max-w-md md:h-auto">
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <div
+        class="flex items-start justify-between pt-4 pb-2 border-b rounded-t dark:border-gray-600"
+      >
+        <h3
+          class="text-xl relative left-[50%] translate-x-[-50%] font-semibold text-gray-900 dark:text-white"
+        >
+          Customize your plan
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="planextended"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col mt-6 h-[28vh]">
+        <div class="inline-flex rounded-md shadow-sm text-center">
+          <input
+            aria-current="page"
+            type="number"
+            placeholder="Life Cover( in lakhs )"
+            class="px-4 py-3 w-[100%] mr-2 mb-4 text-md font-medium text-blue-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            name="lifecover"
+            [(ngModel)]="termForm.lifeCover"
+          />
+          <input
+            aria-current="page"
+            type="number"
+            placeholder="Covers Till Age"
+            class="px-4 py-3 w-[100%] ml-2 text-md mb-4 font-medium text-gray-800 bg-white border border-gray-500 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            name="covertillage"
+            [(ngModel)]="termForm.coverTillAge"
+          />
+        </div>
+        <div class="inline-flex rounded-md shadow-sm text-center mb-4">
+          <div
+            class="px-4 py-1 flex flex-col w-full bg-white border border-gray-400 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+            (click)="coveragecheck? buttonYearClicked(termForm.coverTillAge - this.age):buttonYearClicked(termForm.coverTillAge)"
+            >
+            <a
+              aria-current="page"
+              class="text-sm font-medium text-blue-700"
+
+            >
+              Pay till age 60
+            </a>
+            <span class="text-[13px]">For {{termForm.coverTillAge - this.age}} years</span>
+          </div>
+        </div>
+
+        <div class="flex flex-row w-full gap-5">
+          <button
+            class="px-4 py-2 bg-red-400 border w-[50%] rounded-md"
+            data-modal-hide="planextended"
+            data-modal-target="modalSalaried"
+            data-modal-toggle="modalSalaried"
+          >
+            Go back
+          </button>
+          <button
+            class="px-4 py-2 bg-green-400 border w-[50%] rounded-md"
+            data-modal-target="checkPlan"
+            data-modal-toggle="checkPlan"
+            data-modal-hide="planextended"
+            (click)="calculate()"
+          >
+            Check
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="checkPlan"
+  tabindex="-1"
+  aria-hidden="true"
+  class="fixed top-[10%] left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="relative w-full h-full max-w-md md:h-auto">
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <div
+        class="flex items-start justify-between pt-4 pb-2 border-b rounded-t dark:border-gray-600"
+      >
+        <h3
+          class="text-xl relative left-[50%] translate-x-[-50%] font-semibold text-gray-900 dark:text-white"
+        >
+          Here You GO!
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="checkPlan"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col mt-6 h-[28vh]">
+         <div class="text-sm mb-3">
+          <div class="flex flex-row justify-between w-[100%] items-center">
+            <div class="text-lg w-[50%]">
+              <p class="font-bold">
+                {{ this.premium }}
+                <span class="text-sm font-normal">(inclusive of GST)</span>
+              </p>
+            </div>
+            <div class="text-[14px]">
+              <p class="">5% discount applied for 1st year</p>
+            </div>
+          </div>
+          <div class="">
+            <div
+              class="flex flex-row justify-between items-center w-[100%] gap-5"
+            >
+              <p class="text-[16px] w-[75vh] font-bold mt-2">
+                Return of Premium*
+              </p>
+              <label
+                class="mt-2 relative inline-flex items-center cursor-pointer"
+              >
+                <input type="checkbox" value="" class="sr-only peer" id="returnToggle" (change)="checked()"/>
+                <div
+                  class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                ></div>
+              </label>
+            </div>
+            <p class="">
+              pay 423 rs more to get back your premiums of
+              {{ this.returnAmt }} lacs at the end of Policy Term
+            </p>
+          </div>
+        </div>
+        <button
+          class="w-[100%] px-4 py-2 bg-red-400 border rounded-md"
+          data-modal-hide="checkPlan"
+          data-modal-target="planextended"
+          data-modal-toggle="planextended"
+        >
+          Go back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

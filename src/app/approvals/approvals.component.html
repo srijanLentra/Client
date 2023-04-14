@@ -1,0 +1,97 @@
+<app-admin-navbar></app-admin-navbar>
+<section class="w-[75vw] absolute left-[50%] translate-x-[-50%] top-[15%]">
+  <div class="relative overflow-x-auto">
+    <div class="">
+    <h1 class="my-6 font-medium text-lg ">Pending</h1>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead
+        class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+      >
+        <tr>
+          <th scope="col" class="px-6 py-3 rounded-l-lg">TimeStamp</th>
+          <th scope="col" class="px-6 py-3">Name</th>
+          <th scope="col" class="px-6 py-3">Price</th>
+          <th scope="col" class="px-6 py-3">Info</th>
+          <th scope="col" class="px-6 py-3 rounded-r-lg">Status</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of this.quotes">
+        <tr class="bg-white dark:bg-gray-800" *ngIf="user.checkStatus === 0">
+          <td class="px-6 py-4">{{user.dateOfPurchase}}</td>
+          <td class="px-6 py-4">{{user.firstName}} {{user.lastName}}</td>
+          <td class="px-6 py-4">{{user.annualPremium}}</td>
+          <td class="px-6 py-4">Info</td>
+          <td class="px-6 py-4 " >
+            <button class="px-4 py-2 mr-2 font-medium text-[14px] bg-red-500 text-white rounded-md hover:bg-red-600" (click)="rejectAlert(user)">Reject</button>
+            <button class="px-4 py-2 ml-2 font-medium text-[14px] bg-blue-500 text-white rounded-md hover:bg-blue-600" (click)="approveAlert(user)">Approve</button>
+          </td>
+        </tr>
+      </tbody>
+      </table>
+      <hr class="my-5" />
+      <h1 class="my-6 font-medium text-lg ">Rejected</h1>
+
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead
+        class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+      >
+        <tr>
+          <th scope="col" class="px-6 py-3 rounded-l-lg">TimeStamp</th>
+          <th scope="col" class="px-6 py-3">Name</th>
+          <th scope="col" class="px-6 py-3">Price</th>
+          <th scope="col" class="px-6 py-3">Info</th>
+          <th scope="col" class="px-6 py-3 rounded-r-lg">Status</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of this.quotes">
+        <tr class="bg-white dark:bg-gray-800" *ngIf="user.checkStatus === -1">
+          <td class="px-6 py-4">{{user.dateOfPurchase}}</td>
+          <td class="px-6 py-4">{{user.firstName}} {{user.lastName}}</td>
+          <td class="px-6 py-4">{{user.annualPremium}}</td>
+          <td class="px-6 py-4">Info</td>
+          <td class="px-6 py-4 flex " *ngIf="user.checkStatus === -1">
+            <button class="px-4 py-2 ml-2 font-medium text-[14px] bg-blue-500 text-white rounded-md hover:bg-blue-600" (click)="approveAlert(user)">Accept</button>
+            <button class="px-4 py-2 ml-2 font-medium text-[14px] bg-blue-500 text-white rounded-md hover:bg-blue-600" style="visibility:hidden">Accept</button>
+          </td>
+          <td class="px-6 py-4 " *ngIf="user.checkStatus !== -1">
+            <button class="px-4 py-2 mr-2 font-medium text-[14px] bg-red-500 text-white rounded-md hover:bg-red-600" (click)="rejectAlert(user)">Reject</button>
+            <button class="px-4 py-2 ml-2 font-medium text-[14px] bg-blue-500 text-white rounded-md hover:bg-blue-600" (click)="approveAlert(user)">Approve</button>
+          </td>
+        </tr>
+      </tbody>
+      </table>
+      <hr class="my-5" />
+      <h1 class="my-6 font-medium text-lg ">Accepted</h1>
+
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead
+        class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+      >
+        <tr>
+          <th scope="col" class="px-6 py-3 rounded-l-lg">TimeStamp</th>
+          <th scope="col" class="px-6 py-3">Name</th>
+          <th scope="col" class="px-6 py-3">Price</th>
+          <th scope="col" class="px-6 py-3">Info</th>
+          <th scope="col" class="px-6 py-3 rounded-r-lg">Status</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of this.quotes">
+        <tr class="bg-white dark:bg-gray-800" *ngIf="user.checkStatus === 1">
+          <td class="px-6 py-4">{{user.dateOfPurchase}}</td>
+          <td class="px-6 py-4">{{user.firstName}} {{user.lastName}}</td>
+          <td class="px-6 py-4">{{user.annualPremium}}</td>
+          <td class="px-6 py-4">Info</td>
+          <td class="px-6 py-4 flex" *ngIf="user.checkStatus === 1">
+            <button class="px-4 py-2 ml-2 font-medium text-[14px] bg-red-500 text-white rounded-md hover:bg-red-600" (click)="rejectAlert(user)">Reject</button>
+            <button class="px-4 py-2 ml-2 font-medium text-[14px] bg-red-500 text-white rounded-md hover:bg-red-600" style="visibility:hidden">Reject</button>
+          </td>
+          <td class="px-6 py-4 " *ngIf="user.checkStatus !== 1">
+            <button class="px-4 py-2 mr-2 font-medium text-[14px] bg-red-500 text-white rounded-md hover:bg-red-600" (click)="rejectAlert(user)">Reject</button>
+            <button class="px-4 py-2 ml-2 font-medium text-[14px] bg-blue-500 text-white rounded-md hover:bg-blue-600" (click)="approveAlert(user)">Approve</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>

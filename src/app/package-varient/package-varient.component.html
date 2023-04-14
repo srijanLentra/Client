@@ -1,0 +1,1427 @@
+<app-navbar></app-navbar>
+<div class="absolute top-[15%] left-[50%] translate-x-[-50%] w-[60%]">
+  <h1 class="text-[16px] mb-5 ml-1">4 plans for you</h1>
+
+<!-- --------------------------------------------------- modal 1 ------------------------------------------------------ -->
+
+  <div class="border border-gray-300 rounded-md px-8 py-3 mb-5 mt-5">
+    <div class="flex flex-col">
+      <div class="flex flex-row items-center justify-between">
+        <img src="http://unsplash.it/1000/1000" alt="logo" class="w-16 h-12" />
+        <div class="w-[1px] h-20 bg-gray-200"></div>
+        <div class="">
+          <p class="">Coverage</p>
+          <p class="">5lacs - 50lacs</p>
+        </div>
+        <div class="">
+          <p class="">Covers Upto</p>
+          <p class="">45years</p>
+        </div>
+        <div class="">
+          <p class="">Claims Settled</p>
+          <p class="">98.8%</p>
+        </div>
+        <button
+        class="bg-red-500 rounded-md px-4 py-2 text-white hover:bg-red-700 transition ease-in duration-100"
+        (click)="calculate(this.basePackage)"
+        >
+          Calculate
+        </button>
+      </div>
+    </div>
+    <div class="">
+      <button
+        class="bg-gray-100 text-[10px] text-gray-500 px-2 py-1 rounded-sm"
+        disabled
+      >
+        Tax Benefits
+      </button>
+      <hr class="mt-5" />
+    </div>
+    <!-- </div> -->
+    <div class="flex flex-row mt-5 items-center gap-5">
+      <p
+        class="bg-blue-100 rounded-md text-gray-800 px-2 py-1 text-[11px]"
+      >
+        24hr Claim Settlement
+    </p>
+      <div class="">
+        <button
+          class="text-sm text-blue-500 cursor-pointer"
+          type="button"
+          data-modal-target="modalOne"
+          data-modal-toggle="modalOne"
+        >
+          Plan Details >
+        </button>
+      </div>
+    </div>
+  </div>
+
+<!-- ---------------------------------------------------* modal 1 END *------------------------------------------------------ -->
+
+
+<!-- --------------------------------------------------- modal 2 ------------------------------------------------------ -->
+
+
+  <div class="border border-gray-300 rounded-md px-8 py-3 mb-5 mt-5">
+    <!-- <div class=""> -->
+    <div class="flex flex-col">
+      <div class="flex flex-row items-center justify-between">
+        <img src="http://unsplash.it/1000/1000" alt="logo" class="w-16 h-12" />
+        <div class="w-[1px] h-20 bg-gray-200"></div>
+        <div class="">
+          <p class="">Coverage</p>
+          <p class="">5lacs to 75lacs</p>
+        </div>
+        <div class="">
+          <p class="">Covers Upto</p>
+          <p class="">60 years</p>
+        </div>
+        <div class="">
+          <p class="">Claims Settled</p>
+          <p class="">97.8%</p>
+        </div>
+        <button
+          class="bg-red-500 rounded-md px-4 py-2 text-white hover:bg-red-700 transition ease-in duration-100"
+          (click)="calculate(this.bronzePackage)"
+        >
+          Calculate
+        </button>
+      </div>
+    </div>
+    <div class="">
+      <button
+        class="bg-gray-100 text-[10px] text-gray-500 px-2 py-1 rounded-sm"
+        disabled
+      >
+        Tax Benefits
+      </button>
+      <hr class="mt-5" />
+    </div>
+    <!-- </div> -->
+    <div class="flex flex-row mt-5 items-center gap-5">
+      <button
+        class="bg-blue-100 rounded-md text-gray-800 px-2 py-1 text-[11px]"
+      >
+        24hr Claim Settlement
+      </button>
+      <div class="">
+        <button
+          class="text-sm text-blue-500 cursor-pointer"
+          type="button"
+          data-modal-target="modalTwo"
+          data-modal-toggle="modalTwo"
+        >
+          Plan Details >
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------------------------------------------* modal 2 END * ------------------------------------------------------ -->
+
+<!-- --------------------------------------------------- modal 3 ------------------------------------------------------ -->
+
+<div class="border border-gray-300 rounded-md px-8 py-3 mb-5 mt-5">
+    <!-- <div class=""> -->
+    <div class="flex flex-col">
+      <div class="flex flex-row items-center justify-between">
+        <img src="http://unsplash.it/1000/1000" alt="logo" class="w-16 h-12" />
+        <div class="w-[1px] h-20 bg-gray-200"></div>
+        <div class="">
+          <p class="">Coverage</p>
+          <p class="">25lacs - 2crore</p>
+        </div>
+        <div class="">
+          <p class="">Covers Upto</p>
+          <p class="">60 years</p>
+        </div>
+        <div class="">
+          <p class="">Claims Settled</p>
+          <p class="">98.2%</p>
+        </div>
+        <button
+          (click)="calculate(this.silverPackage)"
+          class="bg-red-500 rounded-md px-4 py-2 text-white hover:bg-red-700 transition ease-in duration-100"
+        >
+          Calculate
+        </button>
+      </div>
+    </div>
+    <div class="">
+      <button
+        class="bg-gray-100 text-[10px] text-gray-500 px-2 py-1 rounded-sm"
+        disabled
+      >
+        Tax Benefits
+      </button>
+      <hr class="mt-5" />
+    </div>
+    <!-- </div> -->
+    <div class="flex flex-row mt-5 items-center gap-5">
+      <button
+        class="bg-blue-100 rounded-md text-gray-800 px-2 py-1 text-[11px]"
+      >
+        24hr Claim Settlement
+      </button>
+      <div class="">
+        <button
+          class="text-sm text-blue-500 cursor-pointer"
+          type="button"
+          data-modal-target="modalThree"
+          data-modal-toggle="modalThree"
+        >
+          Plan Details >
+        </button>
+      </div>
+    </div>
+  </div>
+
+<!-- --------------------------------------------------* modal 3 END * ------------------------------------------------------ -->
+
+
+
+<!-- --------------------------------------------------* modal 4 * ------------------------------------------------------ -->
+
+
+<div class="border border-gray-300 rounded-md px-8 py-3 mb-5 mt-5">
+    <!-- <div class=""> -->
+    <div class="flex flex-col">
+      <div class="flex flex-row items-center justify-between">
+        <img src="http://unsplash.it/1000/1000" alt="logo" class="w-16 h-12" />
+        <div class="w-[1px] h-20 bg-gray-200"></div>
+        <div class="">
+          <p class="">Coverage</p>
+          <p class="">&gt;25lacs</p>
+        </div>
+        <div class="">
+          <p class="">Covers Upto</p>
+          <p class="">75 years</p>
+        </div>
+        <div class="">
+          <p class="">Claims Settled</p>
+          <p class="">98.5%</p>
+        </div>
+        <button
+          (click)="calculate(this.goldPackage)"
+          class="bg-red-500 rounded-md px-4 py-2 text-white hover:bg-red-700 transition ease-in duration-100"
+        >
+          Calculate
+        </button>
+      </div>
+    </div>
+    <div class="">
+      <button
+        class="bg-gray-100 text-[10px] text-gray-500 px-2 py-1 rounded-sm"
+        disabled
+      >
+        Tax Benefits
+      </button>
+      <hr class="mt-5" />
+    </div>
+    <!-- </div> -->
+    <div class="flex flex-row mt-5 items-center gap-5">
+      <button
+        class="bg-blue-100 rounded-md text-gray-800 px-2 py-1 text-[11px]"
+      >
+        24hr Claim Settlement
+      </button>
+      <div class="">
+        <button
+          class="text-sm text-blue-500 cursor-pointer"
+          type="button"
+          data-modal-target="modalFour"
+          data-modal-toggle="modalFour"
+        >
+          Plan Details >
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- --------------------------------------------------* modal 4 END * ------------------------------------------------------ -->
+
+
+</div>
+
+
+<!-- --------------------------------------------------* ALL modal END * ------------------------------------------------------ -->
+
+
+<!-- --------------------------------------------------- Accordian For Modal 1 ------------------------------------------------------ -->
+
+
+
+
+<div
+  id="modalOne"
+  tabindex="-1"
+  aria-hidden="true"
+  class="fixed  z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="fixed left-[50%] -translate-x-[50%] top-[50%] translate-y-[-50%] w-full h-full max-w-md md:h-auto">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <!-- Modal header -->
+      <div
+        class="flex items-start justify-between py-4 border-b rounded-t dark:border-gray-600"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Features
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalOne"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="h-[50vh] overflow-y-auto scrollbar ">
+        <div
+          id="accordion-flush"
+          data-accordion="collapse"
+          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+          data-inactive-classes="text-gray-500 dark:text-gray-400"
+        >
+          <h2 id="accordion-flush-heading-1">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-1"
+              aria-expanded="true"
+              aria-controls="accordion-flush-body-1"
+            >
+              <span>Free Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 rotate-180 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-1"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-1"
+          >
+            <span class="text-gray-800">Tax Benefits</span>
+            <div
+              class="py-2 border-b border-gray-200 pl-5 dark:border-gray-700"
+            >
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                All Premiums paid upto 1.5 Lac a year are exempted from tax
+                under section 80C. In case of demise, the life cover paid to the
+                nominee is completely tax free under section 10(10D)
+              </p>
+              <p class="text-gray-500 dark:text-gray-400">
+                Check out this url to learn about
+                <a
+                  href="https://incometaxindia.gov.in/communications/circular/circular-2-2022.pdf"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >Section 10(10D)</a
+                >
+              </p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-2">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-2"
+            >
+              <span>Paid Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-2"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-2"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700"
+                >Waiver of Premium on CI</span
+              >
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of diagnosis of any of the critical illnesses listed,
+                  future premiums will be waived off & Life cover will continue
+                  as usual
+                </p>
+              </div>
+            </div>
+            <div>
+              <span class="ml-5 font-medium text-gray-700"
+                >Accidental Disability Benefit</span
+              >
+              <div class="mx-5 pt-2 py-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of an Accidental Permanent Disability, the insured
+                  will get 1% of Rider Sum Assured per month for the next 10
+                  years
+                </p>
+              </div>
+              <!-- </div> -->
+              <div>
+                <span class="ml-5 font-medium text-gray-700"
+                  >Critical Illness</span
+                >
+                <div class="mx-5 pt-2 py-5">
+                  <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                    If you are diagnosed with a critical illness, lumpsum
+                    coverage value will be paid immediately
+                  </p>
+                </div>
+                <div>
+                  <span class="ml-5 font-medium text-gray-700"
+                    >Cancer Cover</span
+                  >
+                  <div class="mx-5 py-5 pt-2">
+                    <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                      Pays you an additional lumpsum amount if you are diagnosed
+                      with Cancer
+                    </p>
+                  </div>
+                  <!-- </div> -->
+                  <div>
+                    <span class="ml-5 font-medium text-gray-700"
+                      >Accidental Death</span
+                    >
+                    <div class="mx-5 py-5 pt-2">
+                      <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                        In case of death due to an accident, 100% of the rider
+                        cover amount shall be payable along with the base
+                        coverage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-3">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-3"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-3"
+            >
+              <span>What's not Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-3"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-3"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Suicidal Cover</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  If the Life Insured dies by suicide within 12 months from the
+                  Date of commencement of the policy or the revival date of
+                  policy, the policy shall terminate immediately. Insurer will
+                  refund 80% of the total premiums paid including extra premiums
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="accordion-flush-body-3"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-3"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  The main difference is that the core components from Flowbite
+                  are open source under the MIT license, whereas Tailwind UI is
+                  a paid product. Another difference is that Flowbite relies on
+                  smaller and standalone components, whereas Tailwind UI offers
+                  sections of pages.
+                </p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  However, we actually recommend using both Flowbite, Flowbite
+                  Pro, and even Tailwind UI as there is no technical reason
+                  stopping you from using the best of two worlds.
+                </p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  Learn more about these technologies:
+                </p>
+                <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                  <li>
+                    <a
+                      href="https://flowbite.com/pro/"
+                      class="text-blue-600 dark:text-blue-500 hover:underline"
+                      >Flowbite Pro</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://tailwindui.com/"
+                      rel="nofollow"
+                      class="text-blue-600 dark:text-blue-500 hover:underline"
+                      >Tailwind UI</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-4">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-4"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-4"
+            >
+              <span>What's Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+
+          <div
+            id="accordion-flush-body-4"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-4"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Death Coverage</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  Death due to any cause (e.g. natural, accidental, murder,
+                  illnesses, calamities)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex flex-row mt-6 justify-center gap-4 items-center">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- --------------------------------------------------- Accordian For Modal 1 END ------------------------------------------------------ -->
+
+
+
+<!-- ---------------------------------------------------Accordian for modal 2 ------------------------------------------------------ -->
+
+<div
+  id="modalTwo"
+  tabindex="-1"
+  aria-hidden="false"
+  class="fixed top-[10%] left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="relative w-full h-full max-w-md md:h-auto">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <!-- Modal header -->
+      <div
+        class="flex items-start justify-between py-4 border-b rounded-t dark:border-gray-600"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Features
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalTwo"
+        >
+          <svg
+            aria-hidden="false"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="h-[50vh] overflow-y-auto">
+        <div
+          id="accordion-flush"
+          data-accordion="collapse"
+          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+          data-inactive-classes="text-gray-500 dark:text-gray-400"
+        >
+          <h2 id="accordion-flush-heading-5">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-5"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-5"
+            >
+              <span>Free Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 rotate-180 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-5"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-5"
+          >
+            <span class="text-gray-800">Tax Benefits</span>
+            <div
+              class="py-2 border-b border-gray-200 pl-5 dark:border-gray-700"
+            >
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                All Premiums paid upto 1.5 Lac a year are exempted from tax
+                under section 80C. In case of demise, the life cover paid to the
+                nominee is completely tax free under section 10(10D)
+              </p>
+              <p class="text-gray-500 dark:text-gray-400">
+                Check out this url to learn about
+                <a
+                  href="https://incometaxindia.gov.in/communications/circular/circular-2-2022.pdf"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >Section 10(10D)</a
+                >
+              </p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-6">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-6"
+              aria-expanded="true"
+              aria-controls="accordion-flush-body-6"
+            >
+              <span>Paid Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-6"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-6"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700"
+                >Waiver of Premium on CI</span
+              >
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of diagnosis of any of the critical illnesses listed,
+                  future premiums will be waived off & Life cover will continue
+                  as usual
+                </p>
+              </div>
+            </div>
+            <div>
+              <span class="ml-5 font-medium text-gray-700"
+                >Accidental Disability Benefit</span
+              >
+              <div class="mx-5 pt-2 py-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of an Accidental Permanent Disability, the insured
+                  will get 1% of Rider Sum Assured per month for the next 10
+                  years
+                </p>
+              </div>
+              <!-- </div> -->
+              <div>
+                <span class="ml-5 font-medium text-gray-700"
+                  >Critical Illness</span
+                >
+                <div class="mx-5 pt-2 py-5">
+                  <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                    If you are diagnosed with a critical illness, lumpsum
+                    coverage value will be paid immediately
+                  </p>
+                </div>
+                <div>
+                  <span class="ml-5 font-medium text-gray-700"
+                    >Cancer Cover</span
+                  >
+                  <div class="mx-5 py-5 pt-2">
+                    <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                      Pays you an additional lumpsum amount if you are diagnosed
+                      with Cancer
+                    </p>
+                  </div>
+                  <!-- </div> -->
+                  <div>
+                    <span class="ml-5 font-medium text-gray-700"
+                      >Accidental Death</span
+                    >
+                    <div class="mx-5 py-5 pt-2">
+                      <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                        In case of death due to an accident, 100% of the rider
+                        cover amount shall be payable along with the base
+                        coverage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-7">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-7"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-7"
+            >
+              <span>What's not Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-7"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-7"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Suicidal Cover</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  If the Life Insured dies by suicide within 12 months from the
+                  Date of commencement of the policy or the revival date of
+                  policy, the policy shall terminate immediately. Insurer will
+                  refund 80% of the total premiums paid including extra premiums
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-8">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-8"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-8"
+            >
+              <span>What's Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+
+          <div
+            id="accordion-flush-body-8"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-8"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Death Coverage</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  Death due to any cause (e.g. natural, accidental, murder,
+                  illnesses, calamities)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex flex-row mt-6 justify-center gap-4 items-center">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- --------------------------------------------------- Accordian For Modal 2 END ------------------------------------------------------ -->
+
+
+
+
+<!-- ---------------------------------------------------Accordian for modal 3 ------------------------------------------------------ -->
+
+<div
+  id="modalThree"
+  tabindex="-1"
+  aria-hidden="false"
+  class="fixed top-[10%] left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="relative w-full h-full max-w-md md:h-auto">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <!-- Modal header -->
+      <div
+        class="flex items-start justify-between py-4 border-b rounded-t dark:border-gray-600"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Features
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalThree"
+        >
+          <svg
+            aria-hidden="false"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="h-[50vh] overflow-y-auto">
+        <div
+          id="accordion-flush"
+          data-accordion="collapse"
+          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+          data-inactive-classes="text-gray-500 dark:text-gray-400"
+        >
+          <h2 id="accordion-flush-heading-9">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-9"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-9"
+            >
+              <span>Free Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 rotate-180 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-9"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-9"
+          >
+            <span class="text-gray-800">Tax Benefits</span>
+            <div
+              class="py-2 border-b border-gray-200 pl-5 dark:border-gray-700"
+            >
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                All Premiums paid upto 1.5 Lac a year are exempted from tax
+                under section 80C. In case of demise, the life cover paid to the
+                nominee is completely tax free under section 10(10D)
+              </p>
+              <p class="text-gray-500 dark:text-gray-400">
+                Check out this url to learn about
+                <a
+                  href="https://incometaxindia.gov.in/communications/circular/circular-2-2022.pdf"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >Section 10(10D)</a
+                >
+              </p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-10">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-10"
+              aria-expanded="true"
+              aria-controls="accordion-flush-body-10"
+            >
+              <span>Paid Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-10"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-10"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700"
+                >Waiver of Premium on CI</span
+              >
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of diagnosis of any of the critical illnesses listed,
+                  future premiums will be waived off & Life cover will continue
+                  as usual
+                </p>
+              </div>
+            </div>
+            <div>
+              <span class="ml-5 font-medium text-gray-700"
+                >Accidental Disability Benefit</span
+              >
+              <div class="mx-5 pt-2 py-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of an Accidental Permanent Disability, the insured
+                  will get 1% of Rider Sum Assured per month for the next 10
+                  years
+                </p>
+              </div>
+              <!-- </div> -->
+              <div>
+                <span class="ml-5 font-medium text-gray-700"
+                  >Critical Illness</span
+                >
+                <div class="mx-5 pt-2 py-5">
+                  <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                    If you are diagnosed with a critical illness, lumpsum
+                    coverage value will be paid immediately
+                  </p>
+                </div>
+                <div>
+                  <span class="ml-5 font-medium text-gray-700"
+                    >Cancer Cover</span
+                  >
+                  <div class="mx-5 py-5 pt-2">
+                    <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                      Pays you an additional lumpsum amount if you are diagnosed
+                      with Cancer
+                    </p>
+                  </div>
+                  <!-- </div> -->
+                  <div>
+                    <span class="ml-5 font-medium text-gray-700"
+                      >Accidental Death</span
+                    >
+                    <div class="mx-5 py-5 pt-2">
+                      <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                        In case of death due to an accident, 100% of the rider
+                        cover amount shall be payable along with the base
+                        coverage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-11">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-11"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-11"
+            >
+              <span>What's not Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-11"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-11"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Suicidal Cover</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  If the Life Insured dies by suicide within 12 months from the
+                  Date of commencement of the policy or the revival date of
+                  policy, the policy shall terminate immediately. Insurer will
+                  refund 80% of the total premiums paid including extra premiums
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-12">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-12"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-12"
+            >
+              <span>What's Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+
+          <div
+            id="accordion-flush-body-12"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-12"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Death Coverage</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  Death due to any cause (e.g. natural, accidental, murder,
+                  illnesses, calamities)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex flex-row mt-6 justify-center gap-4 items-center">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- --------------------------------------------------- Accordian For Modal 3 END ------------------------------------------------------ -->
+
+
+
+<!-- --------------------------------------------------- Accordian For Modal 4 ------------------------------------------------------ -->
+
+<div
+  id="modalFour"
+  tabindex="-1"
+  aria-hidden="false"
+  class="fixed top-[10%] left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[90vh] md:h-full"
+>
+  <div class="relative w-full h-full max-w-md md:h-auto">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 px-5">
+      <!-- Modal header -->
+      <div
+        class="flex items-start justify-between py-4 border-b rounded-t dark:border-gray-600"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Features
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalThree"
+        >
+          <svg
+            aria-hidden="false"
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+
+      <div class="h-[50vh] overflow-y-auto">
+        <div
+          id="accordion-flush"
+          data-accordion="collapse"
+          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+          data-inactive-classes="text-gray-500 dark:text-gray-400"
+        >
+          <h2 id="accordion-flush-heading-13">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-13"
+              aria-expanded="true"
+              aria-controls="accordion-flush-body-13"
+            >
+              <span>Free Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 rotate-180 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-13"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-13"
+          >
+            <span class="text-gray-800">Tax Benefits</span>
+            <div
+              class="py-2 border-b border-gray-200 pl-5 dark:border-gray-700"
+            >
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                All Premiums paid upto 1.5 Lac a year are exempted from tax
+                under section 80C. In case of demise, the life cover paid to the
+                nominee is completely tax free under section 10(10D)
+              </p>
+              <p class="text-gray-500 dark:text-gray-400">
+                Check out this url to learn about
+                <a
+                  href="https://incometaxindia.gov.in/communications/circular/circular-2-2022.pdf"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >Section 10(10D)</a
+                >
+              </p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-14">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-14"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-14"
+            >
+              <span>Paid Benefits</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-14"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-14"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700"
+                >Waiver of Premium on CI</span
+              >
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of diagnosis of any of the critical illnesses listed,
+                  future premiums will be waived off & Life cover will continue
+                  as usual
+                </p>
+              </div>
+            </div>
+            <div>
+              <span class="ml-5 font-medium text-gray-700"
+                >Accidental Disability Benefit</span
+              >
+              <div class="mx-5 pt-2 py-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  In case of an Accidental Permanent Disability, the insured
+                  will get 1% of Rider Sum Assured per month for the next 10
+                  years
+                </p>
+              </div>
+              <!-- </div> -->
+              <div>
+                <span class="ml-5 font-medium text-gray-700"
+                  >Critical Illness</span
+                >
+                <div class="mx-5 pt-2 py-5">
+                  <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                    If you are diagnosed with a critical illness, lumpsum
+                    coverage value will be paid immediately
+                  </p>
+                </div>
+                <div>
+                  <span class="ml-5 font-medium text-gray-700"
+                    >Cancer Cover</span
+                  >
+                  <div class="mx-5 py-5 pt-2">
+                    <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                      Pays you an additional lumpsum amount if you are diagnosed
+                      with Cancer
+                    </p>
+                  </div>
+                  <!-- </div> -->
+                  <div>
+                    <span class="ml-5 font-medium text-gray-700"
+                      >Accidental Death</span
+                    >
+                    <div class="mx-5 py-5 pt-2">
+                      <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                        In case of death due to an accident, 100% of the rider
+                        cover amount shall be payable along with the base
+                        coverage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-15">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-15"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-15"
+            >
+              <span>What's not Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-15"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-15"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Suicidal Cover</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  If the Life Insured dies by suicide within 12 months from the
+                  Date of commencement of the policy or the revival date of
+                  policy, the policy shall terminate immediately. Insurer will
+                  refund 80% of the total premiums paid including extra premiums
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-flush-heading-16">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-16"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-16"
+            >
+              <span>What's Covered</span>
+              <svg
+                data-accordion-icon
+                class="w-6 h-6 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+
+          <div
+            id="accordion-flush-body-16"
+            class="hidden pt-5"
+            aria-labelledby="accordion-flush-heading-16"
+          >
+            <div class="">
+              <span class="ml-5 font-medium text-gray-700">Death Coverage</span>
+              <div class="mx-5 pt-2 pb-5">
+                <p class="mb-2 ml-5 text-gray-500 dark:text-gray-400">
+                  Death due to any cause (e.g. natural, accidental, murder,
+                  illnesses, calamities)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex flex-row mt-6 justify-center gap-4 items-center">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- --------------------------------------------------- Accordian For Modal 4 END ------------------------------------------------------ -->
